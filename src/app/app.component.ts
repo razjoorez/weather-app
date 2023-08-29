@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather-app';
+  // env = environment;
+  // constructor() {
+  //   console.log(this.env.baseUrl);
+  // }
 }
