@@ -10,6 +10,9 @@
 
 mat-form-field {
   width: 20%;
+  @media screen and (max-width: 500px) {
+    width: 40%;
+  }
 }
 
 mat-icon{
