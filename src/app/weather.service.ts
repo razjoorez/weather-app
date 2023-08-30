@@ -8,7 +8,8 @@ import { Weather } from './weather';
 })
 export class WeatherService {
 
-   url = 'https:// api.openweathermap.org/data/2.5/ ';
+   url = 'https://api.openweathermap.org/data/2.5/weather';
+   url2 ='api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=9d95b2755371e7037f9e5025e23cb2ed';
    apiKey = '9d95b2755371e7037f9e5025e23cb2ed';
   constructor(private http: HttpClient) { }
 
@@ -18,7 +19,8 @@ export class WeatherService {
       .set('q', city)
       .set('appId', this.apiKey);
 
-      return this.http.get<Weather>(this.url + 'weather', {params: options});
+      return this.http.get<Weather>(this.url,{params: options});
+     // return this.http.get<Weather>(this.url2 );
   }
 
 }
